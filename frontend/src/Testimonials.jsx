@@ -30,8 +30,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-20 px-6 bg-[#F9F9F9]">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
+      <div className="max-w-6
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +45,7 @@ export default function Testimonials() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {/* Feature Highlights */}
+          
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -63,9 +62,9 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Testimonial + Deal Combo */}
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Featured Testimonial */}
+          
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -99,7 +98,7 @@ export default function Testimonials() {
             </div>
           </motion.div>
 
-          {/* Special Offer */}
+          
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
