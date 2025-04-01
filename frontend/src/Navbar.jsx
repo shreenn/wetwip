@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartItems] = useState(0); // Replace with actual cart state
+  const [cartItems] = useState(0); 
   const [scrolled, setScrolled] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
 
-  // Handle scroll effect
+  
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
@@ -21,7 +21,7 @@ export default function Navbar() {
     };
   }, [scrolled]);
 
-  // Menu items for DRY code
+  
   const mainLinks = [
     { name: "Shop", href: "/shop" },
     { name: "Wipes", href: "/wipes" },
@@ -42,7 +42,7 @@ export default function Navbar() {
   } border-b border-gray-100 px-4 sticky top-0 z-50 transition-all duration-300`}
 >
 <div className="max-w-7xl mx-auto flex justify-between items-center">
-{/* Brand + Main Nav */}
+
         <div className="flex items-center space-x-8">
           <a 
             href="/" 
@@ -52,7 +52,7 @@ export default function Navbar() {
             <span className="inline-block absolute left-0 transition-transform duration-300 translate-y-full group-hover:translate-y-0 text-[#2a5e8f]">EMBUER</span>
           </a>
           
-          {/* Desktop Navigation */}
+          
           <div className="hidden md:flex space-x-6 text-sm font-medium">
             {mainLinks.map((link) => (
               <a 
@@ -73,9 +73,9 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Right Side */}
+      
         <div className="flex items-center space-x-6">
-          {/* Secondary Nav */}
+        
           <div className="hidden md:flex space-x-5 text-sm font-medium">
             {secondaryLinks.map((link) => (
               <a 
@@ -95,7 +95,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Cart - With animation */}
+          
           <a 
             href="/cart" 
             className="flex items-center space-x-2 group relative py-1"
@@ -125,7 +125,7 @@ export default function Navbar() {
             <span className="text-xs text-gray-600 hidden sm:inline group-hover:text-[#123458] transition-colors duration-200">Rs0.00</span>
           </a>
 
-          {/* Mobile Menu Button - With animation */}
+          
           <button 
             className="md:hidden text-gray-700 focus:outline-none relative w-6 h-5"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -150,7 +150,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu - With animation */}
+      
       <div 
         className={`md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? "max-h-96 opacity-100 py-4" : "max-h-0 opacity-0 py-0"
