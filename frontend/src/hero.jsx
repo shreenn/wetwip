@@ -48,7 +48,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 6000); // Slightly longer interval for better reading experience
+    }, 6000); 
     return () => clearInterval(interval);
   }, []);
 
@@ -58,7 +58,7 @@ export default function Hero() {
 
   return (
     <section className="relative bg-[#F1EFEC] text-[#030303] h-[90vh] max-h-[900px] overflow-hidden">
-      {/* Background image slider with smoother transitions */}
+      
       <AnimatePresence initial={false}>
         <motion.div 
           key={currentIndex}
@@ -88,7 +88,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            {/* Animated headline that changes with each slide */}
+          
             <AnimatePresence mode="wait">
               <motion.h1 
                 key={`headline-${currentIndex}`}
@@ -113,7 +113,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.5 }}
-                className="h-16 flex items-center" // Fixed height prevents layout shift
+                className="h-16 flex items-center"
               >
                 <div className="space-y-2">
                   <h2 className="text-xl md:text-2xl font-semibold text-[#F1EFEC]">
@@ -148,7 +148,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Image indicator dots - improved styling */}
+      
         <div className="absolute bottom-12 left-0 w-full flex justify-center">
           <motion.div 
             className="flex space-x-3 bg-[#030303]/20 backdrop-blur-sm px-4 py-2 rounded-full"
@@ -172,7 +172,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Refined brand watermark */}
+      
       <motion.div 
         className="absolute top-0 right-0 h-full w-full flex items-center justify-end overflow-hidden pointer-events-none"
         initial={{ opacity: 0 }}
@@ -184,7 +184,7 @@ export default function Hero() {
         </h2>
       </motion.div>
       
-      {/* Subtle gradient overlay at the bottom for better text contrast */}
+      
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#030303]/40 to-transparent"></div>
     </section>
   );
