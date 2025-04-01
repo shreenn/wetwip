@@ -6,7 +6,7 @@ const Footer = forwardRef((props, ref) => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
-          {/* Contact Section */}
+          
           <div>
             <h3 className="text-xl font-bold text-white">CONTACT US</h3>
             <p className="mt-2">For inquiries, email us at:</p>
@@ -19,7 +19,7 @@ const Footer = forwardRef((props, ref) => {
             </div>
           </div>
 
-          {/* Location Section */}
+          
           <div>
             <h3 className="text-xl font-bold text-white">LOCATION</h3>
             <p className="mt-2">Wet Wipes and Co</p>
@@ -28,7 +28,7 @@ const Footer = forwardRef((props, ref) => {
             <p className="mt-2">Monday - Saturday: 9 AM - 6 PM</p>
           </div>
 
-          {/* Quick Links */}
+          
           <div>
             <h3 className="text-xl font-bold text-white">QUICK LINKS</h3>
             <ul className="mt-2 space-y-2">
@@ -39,7 +39,7 @@ const Footer = forwardRef((props, ref) => {
             </ul>
           </div>
 
-          {/* Newsletter Subscription */}
+        
           <div>
             <h3 className="text-xl font-bold text-white">NEWSLETTER</h3>
             <p className="mt-2">Subscribe for updates.</p>
@@ -53,7 +53,7 @@ const Footer = forwardRef((props, ref) => {
           </div>
         </div>
 
-        {/* Footer Bottom */}
+        
         <div className="text-center border-t border-gray-700 mt-6 pt-4">
           <p className="text-gray-500">© 2025 Wet Wipes. All Rights Reserved.</p>
         </div>
