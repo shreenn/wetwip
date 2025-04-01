@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 
-// Set your API base URL here
-const API_BASE_URL = 'http://localhost:5000/api'; // Replace with your actual backend URL
+
+const API_BASE_URL = 'http://localhost:5000/api';
 
 const InventoryPage = () => {
   const [products, setProducts] = useState([]);
@@ -19,7 +19,7 @@ const InventoryPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
 
-  // Fetch all products
+  
   const fetchProducts = async () => {
     try {
       const response = await axios.get(`${API_BASE_URL}/products`);
@@ -36,11 +36,11 @@ const InventoryPage = () => {
     fetchProducts();
   }, []);
 
-  // Handle image upload and convert to base64
+  
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
-      if (file.size > 2 * 1024 * 1024) { // 2MB limit
+      if (file.size > 2 * 1024 * 1024) { 
         toast.error('Image size should be less than 2MB');
         return;
       }
@@ -57,7 +57,7 @@ const InventoryPage = () => {
     }
   };
 
-  // Handle form input changes
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -66,14 +66,14 @@ const InventoryPage = () => {
     });
   };
 
-  // Handle form submission (add or update)
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       let response;
 
       if (editingId) {
-        // Update existing product
+        
         response = await axios.put(
           `${API_BASE_URL}/products/${editingId}`,
           formData
@@ -83,7 +83,7 @@ const InventoryPage = () => {
         ));
         toast.success('Product updated successfully');
       } else {
-        // Add new product
+        
         response = await axios.post(
           `${API_BASE_URL}/products`,
           formData
@@ -98,7 +98,7 @@ const InventoryPage = () => {
     }
   };
 
-  // Edit product
+  
   const handleEdit = (product) => {
     setFormData({
       name: product.name,
@@ -111,7 +111,7 @@ const InventoryPage = () => {
     setIsModalOpen(true);
   };
 
-  // Delete product
+  
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
@@ -124,7 +124,7 @@ const InventoryPage = () => {
     }
   };
 
-  // Reset form
+  
   const resetForm = () => {
     setFormData({
       name: '',
@@ -148,7 +148,7 @@ const InventoryPage = () => {
       
       <h1 className="text-3xl font-bold mb-8 text-gray-800">Inventory Management</h1>
       
-      {/* Add Product Button */}
+      
       <button
         onClick={() => {
           resetForm();
@@ -159,7 +159,7 @@ const InventoryPage = () => {
         Add New Product
       </button>
 
-      {/* Products Table */}
+      
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
@@ -218,7 +218,7 @@ const InventoryPage = () => {
         </table>
       </div>
 
-      {/* Add/Edit Product Modal */}
+      
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
