@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import hero1 from "./assets/hero1.jpg";
@@ -58,7 +57,6 @@ export default function Hero() {
 
   return (
     <section className="relative bg-[#F1EFEC] text-[#030303] h-[90vh] max-h-[900px] overflow-hidden">
-      
       <AnimatePresence initial={false}>
         <motion.div 
           key={currentIndex}
@@ -88,7 +86,6 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-          
             <AnimatePresence mode="wait">
               <motion.h1 
                 key={`headline-${currentIndex}`}
@@ -113,7 +110,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.5 }}
-                className="h-16 flex items-center"
+                className="h-16 flex items-center" 
               >
                 <div className="space-y-2">
                   <h2 className="text-xl md:text-2xl font-semibold text-[#F1EFEC]">
@@ -148,7 +145,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-      
         <div className="absolute bottom-12 left-0 w-full flex justify-center">
           <motion.div 
             className="flex space-x-3 bg-[#030303]/20 backdrop-blur-sm px-4 py-2 rounded-full"
@@ -172,7 +168,6 @@ export default function Hero() {
         </div>
       </div>
 
-      
       <motion.div 
         className="absolute top-0 right-0 h-full w-full flex items-center justify-end overflow-hidden pointer-events-none"
         initial={{ opacity: 0 }}
@@ -183,7 +178,6 @@ export default function Hero() {
           EMBUER
         </h2>
       </motion.div>
-      
       
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#030303]/40 to-transparent"></div>
     </section>

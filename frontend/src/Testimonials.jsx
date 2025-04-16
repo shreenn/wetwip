@@ -1,28 +1,16 @@
 import { motion } from "framer-motion";
 import dp1 from "./assets/dp1.jpg";
-import dp2 from "./assets/dp2.jpg";
+import img2 from "./assets/img2.jpg";
 
 export default function Testimonials() {
   const features = [
-    {
-      title: "Premium Quality",
-      description: "Our wipes undergo 7-stage quality checks for unmatched purity",
-      icon: "🧼"
-    },
-    {
-      title: "Eco-Friendly",
-      description: "100% biodegradable materials that mother nature approves",
-      icon: "🌱"
-    },
-    {
-      title: "Skin Safe",
-      description: "Dermatologist tested and pH balanced for all skin types",
-      icon: "👶"
-    }
+    { title: "Premium Quality", description: "Our wipes undergo 7-stage quality checks for unmatched purity", icon: "🧼" },
+    { title: "Eco-Friendly", description: "100% biodegradable materials that mother nature approves", icon: "🌱" },
+    { title: "Skin Safe", description: "Dermatologist tested and pH balanced for all skin types", icon: "👶" }
   ];
 
   const testimonial = {
-    name: "Mila Kunis",
+    name: "Shanaya K",
     review: "These wipes have become my daily essential. Gentle yet effective, and I love that they're eco-conscious!",
     rating: 5,
     image: dp1
@@ -30,7 +18,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-20 px-6 bg-[#F9F9F9]">
-      <div className="max-w-6
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +33,6 @@ export default function Testimonials() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -62,9 +49,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -98,20 +83,20 @@ export default function Testimonials() {
             </div>
           </motion.div>
 
-          
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative rounded-xl overflow-hidden"
+            className="relative rounded-xl overflow-hidden shadow-lg"
           >
             <img 
-              src={dp2} 
+              src={img2} 
               alt="Special offer"
-              className="w-full h-full object-cover absolute inset-0"
+              className="w-full h-full object-cover"
             />
-            <div className="relative z-10 h-full bg-gradient-to-r from-[#123458]/90 to-[#123458]/70 p-8 flex flex-col justify-center">
+
+            <div className="absolute inset-0 bg-gradient-to-r from-[#123458]/90 to-[#123458]/70 p-8 flex flex-col justify-center">
               <div className="mb-6">
                 <span className="inline-block bg-[#D4C9BE] text-[#123458] px-3 py-1 rounded-full text-sm font-medium mb-3">
                   Limited Time
@@ -119,6 +104,7 @@ export default function Testimonials() {
                 <h3 className="text-2xl font-bold text-white mb-2">Bundle Special</h3>
                 <p className="text-white/90">Get 15% off when you purchase any 3 products</p>
               </div>
+              
               <a
                 href="#products"
                 className="inline-flex items-center justify-center bg-[#D4C9BE] text-[#123458] px-6 py-3 rounded-md font-medium hover:bg-[#c5baaf] transition w-full sm:w-auto"

@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 const Footer = forwardRef((props, ref) => {
   return (
-    <footer ref={ref} className="bg-gray-900 text-gray-300 py-8">
+    <footer id="footer" ref={ref} className="bg-gray-900 text-gray-300 py-8">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
@@ -22,7 +22,7 @@ const Footer = forwardRef((props, ref) => {
           
           <div>
             <h3 className="text-xl font-bold text-white">LOCATION</h3>
-            <p className="mt-2">Wet Wipes and Co</p>
+            <p className="mt-2">Embuer</p>
             <p>Rohini, Shahbad Daulatpur</p>
             <p>NEW DELHI, DELHI, India 110042</p>
             <p className="mt-2">Monday - Saturday: 9 AM - 6 PM</p>

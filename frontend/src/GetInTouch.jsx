@@ -4,14 +4,12 @@ import { FiMapPin, FiMail, FiPhone, FiClock } from "react-icons/fi";
 const ContactSection = () => {
   return (
     <section className="py-20 px-6 bg-[#F1EFEC] relative overflow-hidden">
-      
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 -left-20 w-64 h-64 rounded-full bg-[#123458] mix-blend-multiply"></div>
         <div className="absolute bottom-10 -right-10 w-80 h-80 rounded-full bg-[#D4C9BE] mix-blend-multiply"></div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +26,6 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -83,7 +80,7 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-        
+          
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -91,7 +88,6 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="h-full min-h-[400px] rounded-xl overflow-hidden shadow-lg relative"
           >
-            
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.258176678689!2d77.1994153150834!3d28.64773998240898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5a8a6a0a0d%3A0x8b9e6b7b9e6b7b9e!2sCaxton%20House%2C%20Jhandewalan%20Extn%2C%20New%20Delhi%2C%20Delhi%20110055!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
               width="100%"

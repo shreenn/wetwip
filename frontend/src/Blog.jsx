@@ -4,7 +4,7 @@ import dp from "./assets/Blog.avif";
 
 const Blog = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-[#F1EFEC] to-[#ffffff]">
+    <section id="blog" className="py-20 px-6 bg-gradient-to-b from-[#F1EFEC] to-[#ffffff]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
